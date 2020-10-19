@@ -1,0 +1,783 @@
+/* Styling som gäller alla element på sidan */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+/* SLUT------------------------> */
+
+/* logga och navbar START ------------------------------------------------------> */
+header{
+  background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.3)), url(img/mike-kononov-lFv0V3_2H6s-unsplash.jpg) no-repeat center center fixed;
+  background-size: cover; 
+  min-height: 100vh;
+  width: 100%;
+  color: #fFF;
+}
+
+/* gäller flera spans */
+header span{
+  color: #ff767d;
+}
+
+/* logga START */
+.header{  
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  align-self: flex-start;
+  width: 100%;
+  padding: 1rem 1rem;
+  font-size: 2em;
+  background-color: #000000;
+  text-transform: uppercase;
+}
+.header h2{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 1000;
+  font-size: 2em;
+}
+/* logga SLUT */
+
+
+/* nav START */
+.flexmeny{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  list-style-type: none;  
+}
+.header .flexmeny li{
+  padding: 0 1.5rem;
+}
+/* nav SLUT */
+/* logga och navbar SLUT ------------------------------------------------------> */
+
+
+/* Alla ankarlänkar START ----------------------------------------------------> */
+a{
+  text-decoration: none;
+  transition: color ease-in-out 0.3s;
+}
+
+/* hindra länk från att vara blå */
+a:link {
+  color: #ffffff;
+}
+
+/* hindra omfärgning efter att länken är besökt */
+a:visited {
+  color: #ffffff;
+}
+
+/* hover över knappen med musen */
+a:hover {
+  color: #ff767d;
+}
+/* Alla ankarlänkar SLUT ----------------------------------------------------> */
+
+
+
+/* texten på bakgrundsbilden START */
+.bg-text{
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  font-size: 4rem;
+}
+.bg-text h2 span{
+  text-transform: uppercase;
+  font-weight:bold;
+  text-shadow: 3px 3px 10px black;
+  color: #ff767d;
+
+}
+
+.bg-text h3{
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 500;
+}
+/* texten på bakgrundsbilden SLUT */
+
+
+
+
+/* Allmän styling för flera element på sidan START----------------> */
+
+main, .footer_top, .om{
+  margin: 0 10vw;
+}
+
+main h2, footer h2, .om h2 {
+  color: #000000;
+  font-size: 4rem;
+  text-align: center;
+  padding: 3rem;
+  padding-top: 10rem;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 1000;
+  text-transform: uppercase;
+}
+
+main p, footer p, .om p{
+  font-size: 1.5rem;
+  margin-bottom: 3rem; 
+}
+footer h3, p{
+  text-align: center;
+}
+/* Allmän styling SLUT -----------------------------> */
+
+
+
+
+
+
+/* Tjänster sektionen START-----------------------------------------> */
+.flexcont{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #ff767d;
+
+  box-shadow: rgb(132, 132, 132) 3px 3px 20px;
+}
+
+.box{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+  width: 100%;
+  height: 400px;
+  padding: 0px 40px;
+  transform: all ease 0.3s;
+  color: #000000;
+}
+
+.box h2{
+  font-family: inherit;
+  font-size: 2rem;
+  color: #000000;
+  padding: 20px 0;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.box p{
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: justify;
+
+}
+/* Tjänster sektionen SLUT--------------------------------------------------> */
+
+
+
+
+
+/* Medarbetare showcase  >1000px START-------------------------------------------------- */
+/* Idé från länken här - https://codepen.io/ivanman/pen/rLjOGN */
+.container {
+  margin: 0 auto;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  list-style-type: none;
+  overflow-y: hidden;  
+}
+.container li{
+  background-position: center;
+  background-size: cover;
+  flex-grow: 1;
+  height: 100%;
+  position: relative;
+  transition: all ease-in 0.3s;
+}
+.container li:hover {
+  flex-grow: 3;
+}
+
+
+/* jag försökte på många olika sett få sätta en ny bild för varje <li> och få 
+  effekterna att fungera samtidigt. men detta var det enda jag fick att lira som jag ville. */
+.bild1{
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.6)), url(img/bild1.jpg);   
+}
+.bild1:hover{
+  background-image:url(img/bild1.jpg); 
+}
+.bild2{
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.6)), url(img/bild2.jpg);   
+}
+.bild2:hover{
+  background-image: url(img/bild2.jpg); 
+}
+.bild3{
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.6)), url(img/bild3.jpg);   
+}
+.bild3:hover{
+  background-image: url(img/bild3.jpg); 
+}
+.bild4{
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.6)), url(img/bild4.jpg);   
+}
+.bild4:hover{
+  background-image: url(img/bild4.jpg); 
+}
+.bild5{
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.6)), url(img/bild5.jpg);   
+}
+.bild5:hover{
+  background-image: url(img/bild5.jpg); 
+}
+.bild6{
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.6)), url(img/bild6.jpg);   
+}
+.bild6:hover{
+  background-image: url(img/bild6.jpg); 
+}
+.bild7{
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.6)), url(img/bild7.jpg);   
+}
+.bild7:hover{
+  background-image: url(img/bild7.jpg); 
+}
+
+.container li h2{
+  flex-wrap: nowrap;
+  position: absolute;
+  top: 10rem;
+  left: -3rem;  
+  transform: rotate(90deg);
+  color: #000000;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #ff767d;
+  padding: 5px;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.container li:hover h2{
+  justify-self: flex-end;
+  transform: rotate(0deg);  
+  top: 40rem;
+  left: 1rem;  
+}
+.container li p{
+  display: none;
+}
+
+.container li:hover p{
+  display: block;  
+  position: absolute;
+  bottom: 50px;
+  background-color: #ff767d;
+  color: #000000;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 10px;
+  padding: 10px;
+}
+/* Medarbetare showcase >1000px SLUT-------------------------------------------------- */
+
+
+
+
+
+
+/* Footer START----------------------------------------------------------------------> */
+footer{
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 5vw;
+}
+
+
+.cont_footer{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-top:2px solid #000000;
+}
+
+
+/* Form styling START-----------> */
+form{
+  min-width:30%;
+  text-align: center;
+  background-color: #000000;
+}
+
+form h3{
+  color: #ff767d;
+  font-size: 2rem;
+  padding: 20px;
+}
+
+input{
+  width: 250px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ffffff ;
+  padding: 0.8rem 0.5rem;
+  text-align: center;
+  font-size: 16px;
+  font-family: inherit;
+  color: #ffffff;
+  text-align: center;
+}
+
+
+::placeholder{
+      color: #a5a5a5;
+}
+
+   
+button[type="submit"] {
+  width: 150px;
+  color: #000000;
+  font-family: inherit;
+  font-weight: bolder;
+  margin: 20px 0;
+  background-color: #ff767d;
+  padding: 10px;
+  border-color: #000000d5;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1.8rem;
+}
+
+.formbtn:hover{
+  background-color: #ffffff;
+  color: inherit;
+  border-color: #ff767d;
+}
+
+textarea{
+  width: 250px;
+  height: 70px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: 300 ;
+  margin: 2rem 0;
+  background: transparent;
+  border: 2px solid #ffffff;
+  padding: 10px 10px;
+  border-radius: 15px;
+  transition: all ease-in-out 0.3s;
+}
+
+
+select{
+  color: #ffffff;
+  font-family: inherit;
+  background: transparent;
+  border: 2px solid #ffffff;
+  padding: 10px 30px;
+  border-radius: 15px;
+  cursor: text ;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  width: 250px; 
+}
+label{
+  color: #ffffff;
+  font-size: 15px;
+}
+select option{
+  background-color: #000000c2;
+  border-radius: 30px;
+}
+#error_message{
+  width: 250px;
+  padding-bottom: 30px;
+  margin: 0 auto;
+  color: #ff494f;
+  padding: 0px;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+/* Form styling SLUT-----------> */
+
+
+
+
+
+/* Iframe START */
+iframe{
+  width:100%; 
+  height:500px; 
+  border:0;     
+}
+/* Iframe SLUT */
+
+
+
+
+/* kontakt uppgifter START*/
+.uppgifter{
+  padding: 20px 20px;
+  min-width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  background-color: #000000;
+  color: #ffffff;
+}
+.uppgifter div{
+  padding-bottom: 30px;
+}
+
+.uppgifter h3{
+  padding: 10px 0;
+  font-size: 1.8rem;
+  color: #ff767d;
+  letter-spacing: 0.15rem;
+  text-align: center;
+}
+.uppgifter p{
+  font-size: 1.3rem;
+  font-weight: lighter;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.uppgifter span{
+  font-weight: bold;
+  letter-spacing: 0.15rem;
+}
+
+.footlogga h3{
+  font-size: 1.3rem;
+}
+.footlogga span{
+  color: white;
+}
+
+.footlogga h3 a{
+  font-size: 1.3rem;
+  color: #ff767d;
+}
+/* kontakt uppgifter SLUT*/
+
+/* Footer SLUT----------------------------------------------------------------------> */
+
+
+
+
+
+
+/* Responsivitet ------------------------------------------------------------------> */
+
+@media (max-width: 650px){
+  .box{
+    max-width: 100% ;
+    min-width: 250px;
+    padding: 0px 20px;
+  }
+  .bg-text{
+    left: 5%;
+    font-size: 3rem;
+  }
+}
+
+
+@media (max-width: 800px){
+  .box{
+    max-width: 600px ;
+    margin-bottom: 4rem;
+    background-color: #ff767d;
+  }
+  .flexcont{
+    box-shadow: none;
+    background-color: #ffffff;
+  }
+}
+  
+
+@media (min-width: 801px){
+  .box{
+    max-width: 48% ;
+  }
+}
+
+@media (max-width: 1000px){
+
+  .cont_footer{
+    flex-direction: column-reverse;
+  }
+
+  /* hamburgar meny START-----------------> */
+  .header{
+    display: none;
+  }
+  .logga-ham{
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  .logga-ham h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+
+  .hamicon{
+    width: 40px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-flow: row wrap;        
+    writing-mode: vertical-rl; 
+    cursor: pointer;
+  }
+
+  .hamicon span{
+    background-color: #ffffff;
+  }
+  .hamicon:hover span{
+    background-color: #ff767d;
+  }
+
+  .hamline-one{    
+    width: 40px;
+    height: 2px;
+  }
+  .hamline-two{
+    width: 20px;
+    height: 2px;
+  }
+  .hamline-three{
+    width: 15px;
+    height: 2px;
+  }
+
+
+/* från https://www.w3schools.com/howto/howto_js_curtain_menu.asp ----------------------> */
+  .ham-bg {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    right: 0;
+    top: 0;
+    background-color: #000000;
+    overflow-x: hidden;
+    transition: 0.3s;
+  }
+
+  .ham-bg-content {
+    position: relative;
+    top: 20%; 
+    width: 100%;
+    text-align: center; 
+    margin-top: 30px;
+  }
+
+  .ham-bg a {
+    padding: 20px;
+    text-decoration: none;
+    font-size: 2.5rem;
+    display: block; 
+    transition: 0.3s;
+  }
+
+  .ham-bg .closebtn {
+    position: absolute;
+    top: -30px;
+    right: 5px;
+    font-size: 60px;
+  }
+  /* hamburgar meny SLUT-----------------> */
+  
+  /* Carousel Medarbetare START-------------------> */
+  /* Våra stjärnor visas ej under 1000px width */
+  .showcase{
+    display: none;
+  }
+  
+  .slide-content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #000000;
+    color: #ff767d;
+    text-align: center;
+    /* display: inline-block; */
+  }
+
+  .slide-content p{
+    background-color: #000000;
+    color: #ff767d;
+    font-size: 1.8rem;
+    text-align: center;
+    /* display: table; */
+
+  }
+
+
+  .slide-wrap {
+    position: relative;
+    width: 600px;
+    max-width:90%;
+    margin: 0 auto;
+    transition:0.3s;
+  }
+
+  .slideshow {
+    position: relative;
+  }
+
+  .slide-entry {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+    opacity: 0;
+    visibility: hidden;
+    transition:0.3s;
+    height: 600px;
+  }
+
+  .slide-entry.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  .imgone{
+    background: url(img/bild1.jpg);
+    object-fit: contain;
+  }
+  .imgtwo{
+    background: url(img/bild2.jpg);
+  }
+  .imgthree{
+    background: url(img/bild3.jpg);
+  }
+  .imgfour{
+    background: url(img/bild4.jpg);
+  }
+  .imgfive{
+    background: url(img/bild5.jpg);
+  }
+  .imgsix{
+    background: url(img/bild6.jpg);
+  }
+  .imgseven{
+    background: url(img/bild7.jpg);
+  }
+
+  .slide-content{
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    flex-direction: column;
+    padding: 10px 50px;
+  }
+
+
+
+  .slide-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    bottom: 0;
+    top: 50%;
+    transform: translateY(-60%);
+    width: 100%;
+    list-style: none;
+    padding: 0;
+  }
+  .slide-nav li {
+    background-color: black;
+    cursor: pointer;
+    color:#ff767d;
+    font-size:30px;
+    padding: 5px 10px;
+  }
+
+  #prev-slide {
+    left: 0;
+  }
+
+  #next-slide {
+    right:0;
+  }
+}
+
+@media (max-height: 500px){
+  .ham-bg-content{
+    top: 10%;
+  }
+}
+
+@media (min-width: 1001px){
+  .box{
+    max-width: 47% ;
+    max-height: 300px;
+    margin: 10px;
+  }
+  .ham-bg-content {
+    display: none;
+  }
+  .slide-wrap{
+    display: none;
+  }
+}
+/* Responsivitet SLUT-------------------------------------------------------------> */
+
+
+
+
+
+/* Animation: källa netninja url: https://www.youtube.com/watch?v=PjR97QzOrJM&ab_channel=TheNetNinja */
+.logga{
+  position: relative;
+}
+.dot{
+  position: absolute;
+  bottom: 0;
+  right:-4;
+  color: #ffffff;
+  animation: bounce 6s linear infinite;
+}
+
+
+@keyframes bounce{
+  0% {transform: translateY(0)}
+  4% {transform: translateY(-30px)}
+  6% {transform: translateY(0)}
+  6.5% {transform: translateY(-10px)}
+  7% {transform: translateY(0)}
+  100% {transform: translateY(0)}
+}
+/* animation slut------------------------------------- */
+
