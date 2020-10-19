@@ -55,7 +55,7 @@ function validate() {
 
 
 // Carousel JS START----------------------------------------------------------------->
-// varje gång jag försökte ändra nåt i js så sluta saker fungera så jag lät det vara som det var
+// från https://cheewebdevelopment.com/boilerplate-vanilla-javascript-content-slider/
 
 const slideshow = document.querySelector('.slide-wrap');
 
