@@ -2,8 +2,7 @@
 // Ham nav meny START---------------------------------->
 // från https://www.w3schools.com/howto/howto_js_curtain_menu.asp
 
-
-// behövde ändra från onclick till addEventListener
+// fick ändra från onclick till addEventListener
 const xbtn = document.getElementById("closebtn").addEventListener("click", closeNav);
 const hamLink = document.getElementById("ham-bg-content").addEventListener("click", closeNav);
 const hamMenu = document.getElementById("hamicon").addEventListener("click", openNav);
